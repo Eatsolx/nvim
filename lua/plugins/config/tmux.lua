@@ -21,7 +21,7 @@ require("tmux").setup(
         -- overwrites vim.g.clipboard to redirect * and + to the system
         -- clipboard using tmux. If you sync your system clipboard without tmux,
         -- disable this option!
-        sync_clipboard = true,
+        sync_clipboard = false,
 
         -- synchronizes registers *, +, unnamed, and 0 till 9 with tmux buffers.
         sync_registers = true,
@@ -53,5 +53,12 @@ require("tmux").setup(
 
         -- sets resize steps for y axis
         resize_step_y = 1,
+    },
+    swap = {
+        -- cycles to opposite pane while navigating into the border
+        cycle_navigation = false,
+
+        -- enables default keybindings (C-A-hjkl) for normal mode
+        enable_default_keybindings = true,
     }
 })
