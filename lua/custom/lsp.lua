@@ -1,5 +1,7 @@
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'clangd'
+vim.lsp.enable 'markdown_oxide'
+
 
 -- 确保已安装 lspsaga 插件 (https://github.com/nvimdev/lspsaga.nvim)
 
