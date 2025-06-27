@@ -100,7 +100,7 @@ vim.g.have_nerd_font = true
 vim.g.markdown_folding = 1
 vim.opt.linebreak = true
 vim.g.simple_indicator_on = false
-vim.o.winborder = 'single'
+vim.opt.winborder = 'single'
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -176,10 +176,10 @@ vim.opt.scrolloff = 5
 vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
 
 -- 缩进2个空格等于一个Tab
-vim.o.tabstop = 2
+vim.opt.tabstop = 2
 vim.bo.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftround = true
+vim.opt.softtabstop = 2
+vim.opt.shiftround = true
 -- >> << 时移动长度
-vim.o.shiftwidth = 2
+vim.opt.shiftwidth = 2
 vim.bo.shiftwidth = 2
