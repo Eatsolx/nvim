@@ -1,5 +1,5 @@
 return {
-  "mason-org/mason.nvim",
-  event = { 'BufReadPost', 'BufNewFile', 'VimEnter' },
-  opts = {},
+	"mason-org/mason.nvim",
+	event = { "BufReadPost", "BufNewFile", "VimEnter" },
+	opts = {},
 }
