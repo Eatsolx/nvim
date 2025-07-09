@@ -175,11 +175,11 @@ vim.opt.scrolloff = 5
 -- Big file limit
 vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
 
--- 缩进2个空格等于一个Tab
-vim.opt.tabstop = 2
-vim.bo.tabstop = 2
-vim.opt.softtabstop = 2
+-- 缩进4个空格等于一个Tab
+vim.opt.tabstop = 4
+vim.bo.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.shiftround = true
 -- >> << 时移动长度
-vim.opt.shiftwidth = 2
-vim.bo.shiftwidth = 2
+vim.opt.shiftwidth = 4
+vim.bo.shiftwidth = 4
