@@ -1,5 +1,5 @@
 require('code_runner').setup({
-  mode = "better_term",
+  mode = "toggleterm",
   filetype = {
     java = {
       "cd $dir &&",
