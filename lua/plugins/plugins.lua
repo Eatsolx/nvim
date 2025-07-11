@@ -9,14 +9,6 @@ return {
 		-- cmd = "startuptime",
 	},
 
-	-- 制作markdown表格
-	{
-		"dhruvasagar/vim-table-mode",
-		ft = "markdown",
-		-- cmd = "tablemodetoggle",
-		event = "VeryLazy",
-	},
-
 	{
 		"tpope/vim-sleuth",
 		event = { "BufReadPost", "BufNewFile" },
