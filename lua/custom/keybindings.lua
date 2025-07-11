@@ -21,21 +21,11 @@ map("n", "<C-q>", ":q<CR>", opts)
 map('v', '<', '<gv')
 map('v', '>', '>gv')
 
--- 分屏
-map("n", "s=", ":vsp<CR>")
-map("n", "s-", ":sp<CR>")
-map("n", "sc", "<C-w>c")
-map("n", "so", "<C-w>o") -- close others
-
 -- undoTree
 map("n", '<leader>u', ':UndotreeToggle<CR>', opts)
 
 -- 清除高亮
 map("n", "<leader>h", ":nohlsearch<CR>", opts)
-
--- 剪切板
--- map({"n", "v"}, "y", [["+y]], opts)
--- map({"n", "v"}, "<leader>p", [["+p]], opts)
 
 -- code_runner
 map('n', '<leader>rr', ':RunCode<CR>', { noremap = true, silent = false })
