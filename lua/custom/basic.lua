@@ -109,15 +109,21 @@ vim.opt.cursorline = true
 vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
 
 -- 缩进基础设置
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
- vim.opt.expandtab = true
-vim.opt.shiftround = true
+vim.opt.tabstop = 4       -- 现有 Tab 的显示宽度
+vim.opt.softtabstop = 4   -- 按 Tab 键插入的空格数
+vim.opt.shiftwidth = 4    -- 自动缩进的宽度
+-- vim.opt.expandtab = true  -- 将 Tab 转换为空格
 
 -- 可视化空格（帮助调试）
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·' }
+vim.opt.listchars = {
+    tab = "▸ ",
+    trail = "·",
+    extends = "»",
+    precedes = "«",
+    nbsp = "␣",
+    eol = nil
+}
 
 -- AutoPairs插件快捷键设置
 vim.g.AutoPairsShortcutToggle = '<C-a>t'
