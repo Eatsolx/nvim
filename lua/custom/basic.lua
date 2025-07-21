@@ -12,7 +12,7 @@ vim.o.sidescrolloff = 8
 vim.o.autoread = true
 vim.bo.autoread = true
 -- 行结尾可以跳到下一行
-vim.o.whichwrap = 'b,s,<,>,[,],h,l'
+-- vim.o.whichwrap = 'b,s,<,>,[,],h,l'
 
 -- 透明背景
 -- {
@@ -125,5 +125,5 @@ vim.bo.shiftwidth = 4
 
 -- AutoPairs插件快捷键设置
 vim.g.AutoPairsShortcutToggle = '<C-a>t'
-vim.g.AutoPairsFlyMode = 1
+vim.g.AutoPairsFlyMode = 0
 vim.g.AutoPairsShortcutBackInsert = '<C-a>i'
