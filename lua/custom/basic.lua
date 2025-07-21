@@ -96,12 +96,6 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- 设置空白字符显示方式
---  参见 `:help 'list'`
---  及 `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
 -- 实时预览替换效果
 vim.opt.inccommand = 'split'
 
@@ -114,14 +108,16 @@ vim.opt.cursorline = true
 -- 大文件检测阈值
 vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
 
--- 缩进4个空格等于一个Tab
+-- 缩进基础设置
 vim.opt.tabstop = 4
-vim.bo.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.shiftround = true
--- >> << 缩进操作步长
 vim.opt.shiftwidth = 4
-vim.bo.shiftwidth = 4
+ vim.opt.expandtab = true
+vim.opt.shiftround = true
+
+-- 可视化空格（帮助调试）
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·' }
 
 -- AutoPairs插件快捷键设置
 vim.g.AutoPairsShortcutToggle = '<C-a>t'
