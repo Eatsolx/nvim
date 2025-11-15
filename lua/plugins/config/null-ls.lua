@@ -10,23 +10,9 @@ null_ls.setup({
 		}),
 		null_ls.builtins.diagnostics.fish,
 	},
-})
-
-local status, prettier = pcall(require, "prettier")
-if not status then
-	return
-end
-
-prettier.setup({
-	bin = "prettierd",
-	filetypes = {
-		"css",
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-		"json",
-		"scss",
-		"less",
-	},
+	on_attach = function(client)
+		if client.name == "null-ls" then
+		  -- 确保不禁用 vue_ls 的诊断
+		end
+	end
 })

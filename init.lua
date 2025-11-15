@@ -12,6 +12,7 @@ require('custom.replace')
 
 -- LSP配置
 require('custom.lsp')
+-- require('custom.vue-language-server')
 
 -- 配色方案
 vim.cmd.colorscheme "dracula"
