@@ -1,3 +1,3 @@
-require("dashboard").setup({
-	-- config
-})
+require('dashboard').setup {
+    -- config
+}

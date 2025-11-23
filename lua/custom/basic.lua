@@ -1,5 +1,5 @@
 -- 设置UTF-8编码
-vim.g.encoding = "UTF-8"
+vim.g.encoding = 'UTF-8'
 vim.o.fileencoding = 'utf-8'
 -- -- jk移动时光标下上方保留8行
 vim.o.scrolloff = 8
@@ -16,25 +16,25 @@ vim.bo.autoread = true
 
 -- 透明背景
 -- {
-vim.cmd('au ColorScheme * hi Normal guibg=NONE ctermbg=NONE')
-vim.cmd('au ColorScheme * hi NonText guibg=NONE ctermbg=NONE')
-vim.cmd('au ColorScheme * hi SignColumn guibg=NONE ctermbg=NONE')
+vim.cmd 'au ColorScheme * hi Normal guibg=NONE ctermbg=NONE'
+vim.cmd 'au ColorScheme * hi NonText guibg=NONE ctermbg=NONE'
+vim.cmd 'au ColorScheme * hi SignColumn guibg=NONE ctermbg=NONE'
 
 -- 语言服务器协议 (LSP)
-vim.cmd('autocmd ColorScheme * highlight Pmenu guibg=NONE ctermbg=NONE')
-vim.cmd('autocmd ColorScheme * highlight PmenuSel guibg=NONE ctermbg=NONE')
+vim.cmd 'autocmd ColorScheme * highlight Pmenu guibg=NONE ctermbg=NONE'
+vim.cmd 'autocmd ColorScheme * highlight PmenuSel guibg=NONE ctermbg=NONE'
 -- }
 
 -- 回到上次编辑位置
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufReadPost' }, {
-  callback = function()
-    local row, column = unpack(vim.api.nvim_buf_get_mark(0, '"'))
-    local buf_line_count = vim.api.nvim_buf_line_count(0)
+    callback = function()
+        local row, column = unpack(vim.api.nvim_buf_get_mark(0, '"'))
+        local buf_line_count = vim.api.nvim_buf_line_count(0)
 
-    if row >= 1 and row <= buf_line_count then
-      vim.api.nvim_win_set_cursor(0, { row, column })
-    end
-  end,
+        if row >= 1 and row <= buf_line_count then
+            vim.api.nvim_win_set_cursor(0, { row, column })
+        end
+    end,
 })
 
 vim.loader.enable()
@@ -109,20 +109,20 @@ vim.opt.cursorline = true
 vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
 
 -- 缩进基础设置
-vim.opt.tabstop = 4       -- 现有 Tab 的显示宽度
-vim.opt.softtabstop = 4   -- 按 Tab 键插入的空格数
-vim.opt.shiftwidth = 4    -- 自动缩进的宽度
+vim.opt.tabstop = 4 -- 现有 Tab 的显示宽度
+vim.opt.softtabstop = 4 -- 按 Tab 键插入的空格数
+vim.opt.shiftwidth = 4 -- 自动缩进的宽度
 -- vim.opt.expandtab = true  -- 将 Tab 转换为空格
 
 -- 可视化空格（帮助调试）
 vim.opt.list = true
 vim.opt.listchars = {
-    tab = "▸ ",
-    trail = "·",
-    extends = "»",
-    precedes = "«",
-    nbsp = "␣",
-    eol = nil
+    tab = '▸ ',
+    trail = '·',
+    extends = '»',
+    precedes = '«',
+    nbsp = '␣',
+    eol = nil,
 }
 
 -- AutoPairs插件快捷键设置
