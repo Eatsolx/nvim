@@ -1,4 +1,8 @@
 return {
-	"jiangmiao/auto-pairs",
+	"windwp/nvim-autopairs",
 	-- event = {"InsertEnter"},
+	config = function()
+		require("plugins.config.autopairs")
+	end,
+
 }
